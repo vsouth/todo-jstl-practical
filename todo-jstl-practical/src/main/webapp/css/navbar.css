@@ -1,0 +1,14 @@
+.navbar {
+    background-color: olivedrab;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_title {
+    font-size: 20px;
+    color: white;
+}
