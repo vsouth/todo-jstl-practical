@@ -15,7 +15,17 @@ public class MemoryUserRepoImpl implements UserRepo {
     static {
         USERS.add(new User(1, "qwe", "123", LocalDate.of(1993, 10, 13), Role.ADMIN));
         USERS.add(new User(2, "qwer", "123", LocalDate.of(2000, 3, 15), Role.USER));
-        USERS.add(new User(2, "admin", "admin", LocalDate.of(2001, 1, 1), Role.ADMIN));
+        USERS.add(new User(3, "admin", "admin", LocalDate.of(2001, 1, 1), Role.ADMIN));
+    }
+
+    @Override
+    public Optional<User> findById(Integer id) {
+        return USERS.stream().filter(user -> user.getId() == id).findFirst();
+    }
+
+    @Override
+    public Integer getNextId() {
+        return USERS.size() + 1;
     }
 
     @Override
@@ -35,4 +45,5 @@ public class MemoryUserRepoImpl implements UserRepo {
     public Optional<User> findByLogin(String login) {
         return USERS.stream().filter(user -> user.getLogin().equals(login)).findFirst();
     }
+
 }
