@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    margin: 5 0 10 0;
+}
+
+table {
+    text-align: center;
+    align-content: center;
+    width: 500;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+tbody > tr:hover {
+    background-color: #eeeeee;
+}
+
+tr > * {
+    padding: 5 0;
+}
+
+th {
+    color: white;
+    background-color: olivedrab;
+    border: 1px solid lightgray;
+}
+
+td {
+    text-align: center;
+    border: 1px solid lightgray;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+td > a {
+    color: olivedrab;
+}
+
+td > a:hover {
+    color: darkgreen;
+}
+
+
+
