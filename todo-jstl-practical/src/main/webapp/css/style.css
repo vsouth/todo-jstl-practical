@@ -18,3 +18,20 @@ ul {
     width: 100%;
     margin: 0 auto;
 }
+
+button {
+    padding: 5px 16px;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 6px;
+    color: white;
+    background-color: olivedrab;
+    border-color: darkgreen;
+}
+
+button:hover {
+    color: white;
+    background-color: darkgreen;
+    border-color: black;
+    cursor: pointer;
+}
