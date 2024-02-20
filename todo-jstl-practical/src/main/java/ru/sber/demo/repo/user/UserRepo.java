@@ -9,6 +9,8 @@ public interface UserRepo {
     List<User> findAll();
 
     Optional<User> findByLogin(String login);
+    Optional<User> findById(Integer id);
+    Integer getNextId();
 
     boolean create(User user);
 }
