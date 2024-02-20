@@ -19,19 +19,35 @@
 <div class="navbar">
     <div class="container">
         <nav>
-            <div class="navbar_title">
-                <c:choose>
-                    <c:when test="${user != null}">
-                        ${user.login}, хэллоу!
-                    </c:when>
-                    <c:otherwise>
+            <c:choose>
+                <c:when test="${user.role == 'ADMIN'}">
+                    <div class="links_container">
+                        <div class="left_links">
+                            <a href="/users">Список пользователей</a>
+                            <a href="/register">Создать пользователя</a>
+                        </div>
+                        <div class="right_links">
+                            <a href="/logout">Выйти</a>
+                        </div>
+                    </div>
+                </c:when>
+                <c:when test="${user.role == 'USER'}">
+                    <div class="links_container">
+                        <div class="left_links">
+                            <a href="profile?id=${user.id}">Профиль</a>
+                            <a href="/tasks">Список дел</a>
+                        </div>
+                        <div class="right_links">
+                            <a href="/logout">Выйти</a>
+                        </div>
+                    </div>
+                </c:when>
+                <c:otherwise>
+                    <div class="navbar_title">
                         Добро пожаловать!
-                    </c:otherwise>
-                </c:choose>
-<%--                <c:if test="${user != null}">--%>
-<%--                    Ты вошел!--%>
-<%--                </c:if>--%>
-            </div>
+                    </div>
+                </c:otherwise>
+            </c:choose>
         </nav>
     </div>
 </div>

@@ -1,14 +1,40 @@
 .navbar {
     background-color: olivedrab;
     padding: 20px;
+    height: 60px;
 }
 
 nav {
     display: flex;
-    justify-content: center;
 }
 
 .navbar_title {
     font-size: 20px;
+    color: white;
+}
+
+.links_container {
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_links {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.right_links {
+    justify-content: flex-end;
+}
+
+a {
+    margin: 0 15;
+    color: #f3f3f3;
+}
+
+a:hover {
+    margin: 0 15;
     color: white;
 }
