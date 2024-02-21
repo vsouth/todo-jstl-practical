@@ -20,7 +20,7 @@
                 <tr>
                     <th>id</th>
                     <th>login</th>
-                    <th>password</th>
+                    <th>birthday</th>
                     <th>role</th>
                     <c:if test="${current_user.role == 'ADMIN'}">
                         <th></th>
